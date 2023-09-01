@@ -1,0 +1,267 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 62.5%;
+
+    --bc-body: #f9f4fb;
+    --fc-title: #b52184;
+    --fc-paragraph: #312d64;
+    --bc-card: #ffffff;
+    --fc-button: #ffffff;
+}
+
+body {
+    font-family: "Mulish", sans-serif;
+    width: 1440px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.wrapper {
+    position: absolute;
+    background-color: var(--bc-body);
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+    padding: 0 3rem 0 3rem;
+}
+
+.header__content {
+    padding: 22rem 0 0 6rem;
+}
+
+.header__content h1 {
+    font-size: 5.8rem;
+    font-weight: 900;
+    font-style: normal;
+    line-height: normal;
+    color: #B52184;
+}
+
+.header__content img {
+    margin-top: 15rem;
+}
+
+header p {
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    color: var(--fc-paragraph);
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 3rem 8rem;
+    background: linear-gradient(134deg, #343193 0%, #302c63 100%);
+}
+
+.card {
+    display: flex;
+    /*align-items: stretch;*/
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 38rem;
+    height: 44.8rem;
+    margin: 2rem 0;
+    padding: 3rem 3rem;
+    border-radius: 2rem;
+    background-color: var(--bc-card);
+}
+
+.card h2 {
+    font-size: 3.2rem;
+    font-weight: 900;
+    font-style: normal;
+    line-height: normal;
+    margin: 2.5rem 0 0;
+    color: #b52184;
+}
+
+.card p {
+    font-size: 1.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-top: 1rem;
+    color: var(--fc-paragraph);
+}
+
+form {
+    width: 100%;
+    padding: 0 4.1rem;
+}
+
+fieldset {
+    margin-top: 7.8rem;
+    border: none;
+}
+
+form fieldset legend {
+    font-size: 3.2rem;
+    font-weight: 900;
+    margin-bottom: 4rem;
+    color: var(--fc-title);
+}
+
+.contact-section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    height: max-content;
+    padding: 0 0 0 8rem;
+}
+
+.contact-wrapper {
+    display: grid;
+    gap: 2.4rem;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+    width: 100%;
+    height: 4.8rem;
+
+    padding: 1.2rem 1.6rem 1.2rem 5rem;
+
+    border: 1.5px solid #312D64;
+    border-radius: 1.6rem;
+
+    background-color: var(--bc-body);
+}
+
+.input-wrapper textarea {
+    height: 12.6rem;
+    padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+}
+
+#your-name {
+    background: url(assets/person.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+#your-email {
+    background: url(assets/at.svg) no-repeat scroll 1.4rem 1.2rem;
+}
+
+.input-wrapper input,
+.input-wrapper textarea,
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--fc-paragraph);
+}
+
+.img-stars {
+    position: relative;
+    right: 0;
+    bottom: 0;
+}
+
+/* BUTTON */
+
+.form-button input {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    width: 15.1rem;
+    height: 4.5rem;
+
+    margin: 2.4rem 0 6.5rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    color: var(--fc-button);
+    border: none;
+
+    border-radius: 1.6rem;
+
+    background: linear-gradient(134deg, #343193 0%, #302C63 100%);
+}
+
+footer {
+    font-size: 2.0rem;
+    font-weight: 600;
+
+    display: grid;
+    align-items: center;
+    height: 7.8rem;
+    text-align: center;
+
+    color: #FFFFFF;
+    background: linear-gradient(134deg, #343193 0%, #302C63 100%);
+}
+
+/* ... Estilos para desktop ... */
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 0;
+    }
+
+    .wrapper {
+        position: relative;
+    }
+
+    header {
+        /*align-items: flex-start;*/
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5rem;
+        padding: 3rem 1.5rem;
+    }
+
+    .header__content {
+        order: 2;
+        padding: 0;
+        text-align: center;
+    }
+
+    .header__content h1 {
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
+
+    .header__content img {
+        order: 1;
+        margin-top: 5rem;
+    }
+
+    header p {
+        font-size: 2.2rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+        margin: 1rem 0;
+        padding: 2rem;
+    }
+
+    #img-stars {
+        display: none;
+    }
+
+    /* Ajuste outros estilos conforme necessário para dispositivos móveis */
+}
